@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+spec:
+  selector:
+    matchLabels:
+      app: payment
+  template:
+    metadata:
+      labels:
+        app: payment
+    spec:
+      volumes:
+      - name: payment-gw-config
+        secret:
+          secretName: payments
+      containers:
+      - name: payment
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: 60Mi
+            cpu: 50m
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: payment-gw-config
+          mountPath: /config/files
