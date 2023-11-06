@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myappgo
+spec:
+  selector:
+    matchLabels:
+      app: myappgo
+  template:
+    metadata:
+      labels:
+        app: myappgo
+    spec:
+      containers:
+      - name: myappgo
+        image: aditirvan/myapp-golang:12
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: 60Mi
+            cpu: 50m
+        ports:
+        - containerPort: 8060
