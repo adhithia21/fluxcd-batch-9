@@ -11,3 +11,5 @@ spec:
         kind: HelmRepository
         name: grafana
       interval: 1m
+  values:
+    replicas: 2
