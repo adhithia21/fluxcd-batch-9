@@ -11,6 +11,8 @@ spec:
       labels:
         app: myappgo
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: myappgo
         image: aditirvan/myapp-golang:12
