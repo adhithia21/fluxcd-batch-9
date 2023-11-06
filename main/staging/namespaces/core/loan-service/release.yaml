@@ -1,0 +1,18 @@
+
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: loan-service
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ./helm/application
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+        namespace: flux-system
+      interval: 1m
+  values:
+    image: nginx:alpine
+    port: 8000

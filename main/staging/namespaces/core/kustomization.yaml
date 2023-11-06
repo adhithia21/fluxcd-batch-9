@@ -7,3 +7,4 @@ resources:
   - products
   - payments
   - authsvc
+  - loan-service
