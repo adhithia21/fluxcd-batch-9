@@ -14,5 +14,5 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    image: nginx:alpine
+    image: nginx:latest
     port: 80
