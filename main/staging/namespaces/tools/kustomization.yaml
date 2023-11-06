@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
   - ../../module/dockerconfigjson.yaml
   - ../../../../helm/grafana.yaml
+  - grafana
