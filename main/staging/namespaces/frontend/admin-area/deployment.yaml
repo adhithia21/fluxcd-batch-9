@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-area
+spec:
+  selector:
+    matchLabels:
+      app: admin-area
+  template:
+    metadata:
+      labels:
+        app: admin-area
+    spec:
+      containers:
+      - name: admin-area
+        image: nginx:alpine
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          resources:
+            memory: 64Mi
+            cpu: 50m
+        ports:
+        - containerPort: 80
