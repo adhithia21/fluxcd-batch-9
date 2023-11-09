@@ -15,7 +15,7 @@ spec:
       - name: regcred
       containers:
       - name: myappgo
-        image: aditirvan/myapp-golang:14 # {"$imagepolicy": "flux-system:myapp-golang"}
+        image: aditirvan/myapp-golang:15 # {"$imagepolicy": "flux-system:myapp-golang"}
         resources:
           limits:
             memory: "128Mi"
