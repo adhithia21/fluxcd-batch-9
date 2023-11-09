@@ -4,6 +4,6 @@ metadata:
   name: myapp-golang
 spec:
   image: aditirvan/myapp-golang
-  interval: 5m
+  interval: 1m
   secretRef:
     name: regcred
